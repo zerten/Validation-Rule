@@ -1,0 +1,31 @@
+Create a Formula Field that Returns a Number
+Create a formula field that calculates the volume of a cylinder, rounded to the nearest whole number. Use radius, height, and π (the constant Pi = 3.14), like this:
+3.14 x (radius x radius) x height
+
+Note: Although this formula field might best be created on a custom object, for simplicity, you create this formula on the Opportunity object.
+Create custom fields to use in a formula field:
+Create a custom field:
+Object: Opportunity
+Type: Number
+Field Label: Radius
+Field Name: Radius
+Create another custom field:
+Object: Opportunity
+Type: Number
+Field Label: Height
+Field Name: Height
+Create a formula field:
+Object: Opportunity
+Type: Formula
+Field Label: Cylinder Volume
+Field Name: Cylinder_Volume
+Formula Return Type: Number
+Decimal Places: 0
+Use the Radius field in the formula
+Use the Height field in the formula
+Use 3.14 for the value of Pi
+
+FORMULA: 
+
+ROUND (3.14 * Radius__c *  Radius__c * Height__c ,0)
+
